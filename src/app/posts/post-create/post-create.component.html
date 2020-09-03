@@ -1,4 +1,29 @@
-<textarea rows='10' [value]="content"></textarea>
-<hr>
-<button (click)="onAddPost()">Save</button>
-<p>{{content}}</p>
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field >
+      <input
+        matInput
+        placeholder="Title"
+        type= "text"
+        name="title"
+        ngModel
+        required
+        #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter a Title.</mat-error>
+    </mat-form-field>
+    <mat-form-field >
+      <textarea
+        matInput
+        rows='10'
+        placeholder="content..."
+        name="content"
+        ngModel
+        required
+        #content="ngModel"
+        ></textarea>
+        <mat-error *ngIf="content.invalid">Please enter some content.</mat-error>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button >Add Post</button>
+  </form>
+</mat-card>

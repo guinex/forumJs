@@ -525,5 +525,12 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<h1> new App </h1>
-<app-post-create></app-post-create>
+
+<app-header></app-header>
+<main>
+  <!-- <app-post-create (PostCreated) ="onPostAdded($event)"></app-post-create>
+  <app-post-list [posts] ="postCache"></app-post-list> -->
+  <app-post-create></app-post-create>
+  <app-post-list ></app-post-list>
+</main>
+

@@ -1,0 +1,12 @@
+mat-card{
+  width: 80%;
+  background-color: white;
+}
+mat-form-field, textarea, input{
+  width: 100%;
+  color: black;
+}
+
+input{
+  border-bottom: 1px solid black;
+}
