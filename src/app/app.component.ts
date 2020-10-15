@@ -8,8 +8,8 @@ import { Post } from './posts/post.model';
 })
 export class AppComponent {
   title = 'newapp';
-  postCache: Post[] = [];
-  onPostAdded(post){
-    this.postCache.push(post)
-  };
+  // postCache: Post[] = [];
+  // onPostAdded(post){
+  //   this.postCache.push(post)
+  // };
 }
