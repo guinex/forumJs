@@ -5,3 +5,33 @@
 .info-text{
   text-align: center;
 }
+mat-spinner{
+  margin: auto;
+}
+
+.image-preview{
+  width: 100%;
+}
+.image-preview img{
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+mat-paginator{
+  margin-top: 1rem;
+}
+
+/* .mat-expansion-panel{
+  background: #dedede;
+  color: black;
+}
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+  background: #dedede;
+  color: black;
+}
+.mat-paginator{
+  background: #dedede;
+  color: black;
+}
+.mat-select-value{
+  color: black;
+} */

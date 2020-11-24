@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 import { Post } from './posts/post.model';
 
 @Component({
@@ -6,10 +7,18 @@ import { Post } from './posts/post.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'newapp';
-  // postCache: Post[] = [];
-  // onPostAdded(post){
-  //   this.postCache.push(post)
-  // };
+
+export class AppComponent implements OnInit {
+  title = 'Post It';
+
+  constructor(private authService: AuthService){}
+  ngOnInit(){
+    this.authService.autoAuthUser();
+  }
+  ngOnDestroy() {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+
+  }
+
 }

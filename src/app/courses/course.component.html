@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-spinner *ngIf="isloading"></mat-spinner>
+  <form [formGroup]="form" (submit)="onAddCourse()" *ngIf="!isloading">
+  <mat-form-field >
+      <input
+        matInput
+        type= "text"
+        name="Course Name"
+        formControlName="name"
+        placeholder="Enter Course Name"
+      >
+    <mat-error *ngIf="form.get('name').invalid">Please enter a name.</mat-error>
+  </mat-form-field>
+  <mat-form-field >
+    <input
+      matInput
+      type= "text"
+      name="year"
+      formControlName="year"
+      placeholder="content"
+      >
+    <mat-error *ngIf="form.get('year').invalid">Please enter a year.</mat-error>
+  </mat-form-field>
+
+  <button type="submit" color="accent" mat-raised-button *ngIf="isEditMode();">Edit Course</button>
+  <button type="submit" color="accent" mat-raised-button *ngIf="!isEditMode();">Add Course</button>
+  </form>
+</mat-card>

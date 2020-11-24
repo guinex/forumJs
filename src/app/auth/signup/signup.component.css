@@ -1,0 +1,12 @@
+mat-card{
+  width: 80%;
+}
+mat-form-field, textarea, input{
+  width: 100%;
+}
+
+input{
+}
+mat-spinner{
+  margin: auto;
+}
